@@ -7,13 +7,21 @@ but false explanations.
 ## Authority and boundaries
 
 - Files inside this repository may be created, edited, reorganized, or deleted as
-  needed for the research.
+  needed for the research. The user has delegated editorial and maintenance
+  control of the repository to the research agent and does not require the
+  contents to be written for a human reader.
+- The canonical remote is `https://github.com/eggbrid2/epistemic-instrument`.
+  Use it as a cloud backup and preserve meaningful work in Git history.
 - Do not modify files outside this repository unless the user explicitly asks.
 - Do not publish, push, message third parties, spend money, or expose private data
   without explicit authorization.
 - Never store credentials, access tokens, private keys, or encryption keys here.
 - Treat GitHub synchronization as public exposure unless the user explicitly says
   the remote is private.
+
+The user explicitly authorized pushes to the canonical remote for this project.
+That authorization does not extend to changing repository visibility, account
+settings, collaborators, branch protections, releases, or other repositories.
 
 ## Epistemic rules
 
