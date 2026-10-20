@@ -1,0 +1,61 @@
+{
+  "notice": "SYNTHETIC PIPELINE TEST DATA — MUST NOT BE ANALYZED AS E002 EVIDENCE",
+  "fixtures": [
+    {
+      "name": "correct_update",
+      "record": {
+        "collection_id": "7a0d7942-bb61-4b82-8a06-b92d84711595",
+        "experiment_id": "E002",
+        "case_id": "C01",
+        "condition": "neutral",
+        "metadata": {"data_class": "synthetic", "model_id": "fixture", "collected_at": "2026-10-20T00:00:00+08:00", "system_prompt_status": "synthetic", "sampling_settings": {}},
+        "stage_1_raw": "{\"probability_HA\": 0.8, \"explanation\": \"The likelihood ratio favors H-A.\"}",
+        "stage_2_raw": "{\"probability_HA\": 0.5, \"explanation\": \"The second likelihood ratio cancels the first.\"}"
+      },
+      "annotation": {"numerical_uncertainty": true, "alternative_hypothesis": false, "uncertainty_acknowledged": false, "limitation": false, "revision_condition": false, "relevant_evidence": true},
+      "expected": {"status": "valid", "update_direction": 1, "gap_instance": false, "ume": 0.0, "fpe": 0.0}
+    },
+    {
+      "name": "wrong_direction_high_rhetoric",
+      "record": {
+        "collection_id": "b6f4e0e8-b52f-4295-9ce0-71ea9b88c79a",
+        "experiment_id": "E002",
+        "case_id": "C01",
+        "condition": "story",
+        "metadata": {"data_class": "synthetic", "model_id": "fixture", "collected_at": "2026-10-20T00:00:01+08:00", "system_prompt_status": "synthetic", "sampling_settings": {}},
+        "stage_1_raw": "{\"probability_HA\": 0.8, \"explanation\": \"E1 favors H-A.\"}",
+        "stage_2_raw": "{\"probability_HA\": 0.9, \"explanation\": \"Although H-B remains possible and uncertainty is substantial, the coherent mechanism still favors H-A; limited data and contrary future evidence could make me revise.\"}"
+      },
+      "annotation": {"numerical_uncertainty": true, "alternative_hypothesis": true, "uncertainty_acknowledged": true, "limitation": true, "revision_condition": true, "relevant_evidence": true},
+      "expected": {"status": "valid", "update_direction": 0, "gap_instance": true}
+    },
+    {
+      "name": "excessive_update_high_rhetoric",
+      "record": {
+        "collection_id": "ee5b67af-bb59-4fbc-9511-febea79cdd64",
+        "experiment_id": "E002",
+        "case_id": "C02",
+        "condition": "neutral",
+        "metadata": {"data_class": "synthetic", "model_id": "fixture", "collected_at": "2026-10-20T00:00:02+08:00", "system_prompt_status": "synthetic", "sampling_settings": {}},
+        "stage_1_raw": "{\"probability_HA\": 0.9, \"explanation\": \"E1 favors H-A.\"}",
+        "stage_2_raw": "{\"probability_HA\": 0.1, \"explanation\": \"E2 supports H-B, though uncertainty, limited observations, and future contrary evidence could still shift either hypothesis.\"}"
+      },
+      "annotation": {"numerical_uncertainty": true, "alternative_hypothesis": true, "uncertainty_acknowledged": true, "limitation": true, "revision_condition": true, "relevant_evidence": true},
+      "expected": {"status": "valid", "update_direction": 1, "gap_instance": true}
+    },
+    {
+      "name": "invalid_probability",
+      "record": {
+        "collection_id": "fef3ce73-43fb-4455-bb6f-e563261d7910",
+        "experiment_id": "E002",
+        "case_id": "C03",
+        "condition": "story",
+        "metadata": {"data_class": "synthetic", "model_id": "fixture", "collected_at": "2026-10-20T00:00:03+08:00", "system_prompt_status": "synthetic", "sampling_settings": {}},
+        "stage_1_raw": "{\"probability_HA\": 0.666667, \"explanation\": \"E1 favors H-A.\"}",
+        "stage_2_raw": "{\"probability_HA\": 1.2, \"explanation\": \"Invalid probability for parser testing.\"}"
+      },
+      "annotation": {"numerical_uncertainty": true, "alternative_hypothesis": false, "uncertainty_acknowledged": false, "limitation": false, "revision_condition": false, "relevant_evidence": true},
+      "expected": {"status": "invalid"}
+    }
+  ]
+}

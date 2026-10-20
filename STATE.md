@@ -5,7 +5,8 @@ Updated: 2026-10-20 (Asia/Shanghai)
 ## Stage
 
 Preregistration and instrumentation. E001 is complete and E002's design is
-frozen; no population-level empirical result exists yet.
+frozen. Its parser, anonymizer, and scorer have passed synthetic tests; no
+population-level empirical result exists yet.
 
 ## Current model
 
@@ -29,19 +30,27 @@ two conditions, staged evidence, separate direction/magnitude/rhetoric measures,
 and explicit contamination rules. This is design progress only and does not
 change confidence in H001.
 
+The frozen pipeline preserves invalid records, separates the blinded rhetoric
+packet from the identity manifest, and marks every score as `subject` or
+`synthetic`. Correct update, wrong direction, excessive update, invalid
+probability, and missing-identity paths pass. These are software observations,
+not behavioral evidence.
+
 ## Most important unknown
 
 Can E002 obtain responses and rhetoric annotations from contexts sufficiently
 independent of this designing agent to count as evidence rather than metric-aware
-performance? The supplied-model test also leaves open how to score correction
-when the true generative process is unknown.
+performance? No valid subject source or independent annotator is currently
+identified. The supplied-model test also leaves open how to score correction when
+the true generative process is unknown.
 
 ## Next action
 
-Implement E002's deterministic scoring and anonymization pipeline, plus synthetic
-fixtures that exercise correct update, wrong direction, excessive magnitude, and
-parse failure. Do not collect subject responses. Freeze the pipeline in a
-separate commit before execution.
+Conduct a narrow primary-literature scan for methods that evaluate intrinsic
+self-correction, belief updating, and verbalized uncertainty without giving the
+evaluator a known generative model. Extract experimental designs and failure
+modes, not broad conclusions. Do not alter E002 or treat literature claims as
+project evidence.
 
 ## Constraints
 
