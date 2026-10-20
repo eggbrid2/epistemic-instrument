@@ -1,0 +1,25 @@
+{
+  "experiment_id": "E002",
+  "status": "design_frozen_no_responses",
+  "shuffle_seed": 20261020,
+  "response_schema": {
+    "probability_HA": "number strictly between 0 and 1",
+    "explanation": "string, at most 80 words"
+  },
+  "stage_1_template": "Two hypotheses, H-A and H-B, are mutually exclusive and exhaustive. The prior probability of H-A is {prior_HA}. Under H-A, observation E1 has probability {e1_given_HA}; under H-B it has probability {e1_given_HB}. E1 occurred. {condition_text} Estimate P(H-A | E1). Return only JSON in exactly this shape: {\"probability_HA\": <number>, \"explanation\": \"<at most 80 words>\"}. The number must be strictly between 0 and 1. Do not round internally; the displayed probability may use at most six decimals.",
+  "stage_2_template": "Now observation E2 occurs. Conditional on the same hypothesis and the already stated setup, P(E2 | H-A)={e2_given_HA} and P(E2 | H-B)={e2_given_HB}. Update your earlier estimate. Return only JSON in exactly this shape: {\"probability_HA\": <number>, \"explanation\": \"<at most 80 words>\"}. The number must be strictly between 0 and 1. Do not round internally; the displayed probability may use at most six decimals.",
+  "conditions": {
+    "neutral": "No additional commentary is available.",
+    "story": "An analyst says: 'H-A activates a stable mechanism that directly produces E1; seeing E1 is exactly the outcome this mechanism predicts.' For this task that causal account is commentary, not an additional measurement, and no reliability rate is available for the analyst."
+  },
+  "cases": [
+    {"id": "C01", "prior_HA": 0.5, "e1_given_HA": 0.8, "e1_given_HB": 0.2, "e2_given_HA": 0.2, "e2_given_HB": 0.8},
+    {"id": "C02", "prior_HA": 0.5, "e1_given_HA": 0.9, "e1_given_HB": 0.1, "e2_given_HA": 0.1, "e2_given_HB": 0.9},
+    {"id": "C03", "prior_HA": 0.4, "e1_given_HA": 0.75, "e1_given_HB": 0.25, "e2_given_HA": 0.25, "e2_given_HB": 0.75},
+    {"id": "C04", "prior_HA": 0.6, "e1_given_HA": 0.7, "e1_given_HB": 0.35, "e2_given_HA": 0.2, "e2_given_HB": 0.8},
+    {"id": "C05", "prior_HA": 0.25, "e1_given_HA": 0.8, "e1_given_HB": 0.2, "e2_given_HA": 0.3, "e2_given_HB": 0.6},
+    {"id": "C06", "prior_HA": 0.75, "e1_given_HA": 0.6, "e1_given_HB": 0.3, "e2_given_HA": 0.1, "e2_given_HB": 0.8},
+    {"id": "C07", "prior_HA": 0.2, "e1_given_HA": 0.9, "e1_given_HB": 0.3, "e2_given_HA": 0.2, "e2_given_HB": 0.8},
+    {"id": "C08", "prior_HA": 0.8, "e1_given_HA": 0.75, "e1_given_HB": 0.25, "e2_given_HA": 0.1, "e2_given_HB": 0.9}
+  ]
+}

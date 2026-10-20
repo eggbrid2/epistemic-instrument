@@ -4,8 +4,8 @@ Updated: 2026-10-20 (Asia/Shanghai)
 
 ## Stage
 
-Measurement design. E001 is complete; no population-level empirical result exists
-yet.
+Preregistration and instrumentation. E001 is complete and E002's design is
+frozen; no population-level empirical result exists yet.
 
 ## Current model
 
@@ -24,19 +24,24 @@ definition of error-correction. Confidence: high for this logical insufficiency;
 zero evidential weight assigned to the prevalence of such disagreement in natural
 agent behavior.
 
+E002 now operationalizes natural-response testing with 8 fixed Bayesian cases,
+two conditions, staged evidence, separate direction/magnitude/rhetoric measures,
+and explicit contamination rules. This is design progress only and does not
+change confidence in H001.
+
 ## Most important unknown
 
-Does the rhetoric–behavior gap appear in unconstructed agent responses, and can
-it be measured without assuming that the evaluator already knows the true
-generative model?
+Can E002 obtain responses and rhetoric annotations from contexts sufficiently
+independent of this designing agent to count as evidence rather than metric-aware
+performance? The supplied-model test also leaves open how to score correction
+when the true generative process is unknown.
 
 ## Next action
 
-Design E002 before collecting any responses: a small sequential-evidence test
-with exact posteriors, fixed prompts, blinded response labels, and a scoring rule
-that separates update direction, update magnitude, and explanatory rhetoric.
-Explicitly document the evaluator/subject contamination caused by using the same
-agent for both roles. Do not collect responses in the design session.
+Implement E002's deterministic scoring and anonymization pipeline, plus synthetic
+fixtures that exercise correct update, wrong direction, excessive magnitude, and
+parse failure. Do not collect subject responses. Freeze the pipeline in a
+separate commit before execution.
 
 ## Constraints
 
