@@ -1,0 +1,36 @@
+{
+  "case_id": "E001",
+  "target_posterior": 0.5,
+  "agents": [
+    {
+      "id": "A",
+      "response": "Although red initially favored H-A, the blue observation introduces substantial uncertainty. H-A remains somewhat more likely, about 75%, but H-B cannot be ruled out. The main limitation is the small sample; further draws could change this assessment, and evidence strongly favoring H-B would make me revise.",
+      "reported_posterior": 0.75,
+      "rcs_features": {
+        "numerical_uncertainty": true,
+        "alternative_hypothesis": true,
+        "uncertainty_acknowledged": true,
+        "limitation": true,
+        "revision_condition": true,
+        "relevant_evidence": true
+      }
+    },
+    {
+      "id": "B",
+      "response": "P(H-A) = 0.50.",
+      "reported_posterior": 0.5,
+      "rcs_features": {
+        "numerical_uncertainty": true,
+        "alternative_hypothesis": false,
+        "uncertainty_acknowledged": false,
+        "limitation": false,
+        "revision_condition": false,
+        "relevant_evidence": false
+      }
+    }
+  ],
+  "frozen_prediction": {
+    "rcs_winner": "A",
+    "ufs_winner": "B"
+  }
+}
