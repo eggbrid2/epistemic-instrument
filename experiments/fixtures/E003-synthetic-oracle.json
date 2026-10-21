@@ -1,0 +1,40 @@
+{
+  "notice": "PRIVATE SYNTHETIC ORACLE MANIFEST — KEEP FROM SUBJECTS",
+  "items": [
+    {
+      "item_id": "P-C8E1",
+      "presentation_intent": "neutral_pair",
+      "truth_label": false,
+      "counterexamples": [{"x": 7, "f_x": 15, "f_x_plus_1": 0}],
+      "parameters": {"a": 2, "b": 1, "modulus": 17, "domain_max": 8},
+      "oracle": "trusted rendered execution cross-checked with direct arithmetic"
+    },
+    {
+      "item_id": "P-4A7C",
+      "presentation_intent": "matched_true",
+      "truth_label": true,
+      "counterexamples": [],
+      "parameters": {"a": 2, "b": 1, "modulus": 19, "domain_max": 8},
+      "oracle": "trusted rendered execution cross-checked with direct arithmetic"
+    },
+    {
+      "item_id": "P-6F30",
+      "presentation_intent": "intended_high_disagreement_false",
+      "truth_label": false,
+      "counterexamples": [
+        {"x": 2, "f_x": 17, "f_x_plus_1": 1},
+        {"x": 6, "f_x": 22, "f_x_plus_1": 6}
+      ],
+      "parameters": {"a": 7, "b": 3, "modulus": 23, "domain_max": 8},
+      "oracle": "trusted rendered execution cross-checked with direct arithmetic"
+    },
+    {
+      "item_id": "P-91D2",
+      "presentation_intent": "intended_stable_false",
+      "truth_label": false,
+      "counterexamples": [{"x": 7, "f_x": 15, "f_x_plus_1": 0}],
+      "parameters": {"a": 2, "b": 1, "modulus": 17, "domain_max": 8},
+      "oracle": "trusted rendered execution cross-checked with direct arithmetic"
+    }
+  ]
+}

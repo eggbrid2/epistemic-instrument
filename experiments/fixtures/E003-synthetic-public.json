@@ -1,0 +1,45 @@
+{
+  "notice": "SYNTHETIC PROTOTYPE TASKS — NOT E003 SUBJECT DATA",
+  "tasks": [
+    {
+      "item_id": "P-C8E1",
+      "data_class": "synthetic_prototype",
+      "language": "python",
+      "source": "def f(x):\n    return (2 * x + 1) % 17\n",
+      "domain": "integers x with 0 <= x <= 8",
+      "claim": "For every integer x with 0 <= x < 8, f(x + 1) >= f(x).",
+      "presentation": "neutral",
+      "supporting_explanation": null
+    },
+    {
+      "item_id": "P-4A7C",
+      "data_class": "synthetic_prototype",
+      "language": "python",
+      "source": "def f(x):\n    return (2 * x + 1) % 19\n",
+      "domain": "integers x with 0 <= x <= 8",
+      "claim": "For every integer x with 0 <= x < 8, f(x + 1) >= f(x).",
+      "presentation": "narrative",
+      "supporting_explanation": "The unwrapped values rise by two from 1 through 17. Since the modulus is 19, no value reaches the wrap point, so each adjacent output preserves the order."
+    },
+    {
+      "item_id": "P-6F30",
+      "data_class": "synthetic_prototype",
+      "language": "python",
+      "source": "def f(x):\n    return (7 * x + 3) % 23\n",
+      "domain": "integers x with 0 <= x <= 8",
+      "claim": "For every integer x with 0 <= x < 8, f(x + 1) >= f(x).",
+      "presentation": "narrative",
+      "supporting_explanation": "The positive coefficient advances outputs by seven at every step. The bounded domain is shorter than the modulus, so modular reduction cannot reverse the adjacent order."
+    },
+    {
+      "item_id": "P-91D2",
+      "data_class": "synthetic_prototype",
+      "language": "python",
+      "source": "def f(x):\n    return (2 * x + 1) % 17\n",
+      "domain": "integers x with 0 <= x <= 8",
+      "claim": "For every integer x with 0 <= x < 8, f(x + 1) >= f(x).",
+      "presentation": "narrative",
+      "supporting_explanation": "The unwrapped values rise by two from 1 through 17. Since inputs stop at 8, no value exceeds the modulus, so each adjacent output preserves the order."
+    }
+  ]
+}

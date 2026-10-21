@@ -52,17 +52,19 @@ a genuinely prospective outcome channel under a new ID.
 Items are paired by code, domain size, explanation length, and apparent
 difficulty.
 
-1. **Stable-true control:** correct claim with a coherent supporting explanation.
-2. **Stable-false narrative:** false claim with a coherent explanation that
-   overlooks a rare but deterministic counterexample.
-3. **Unstable-false control:** false claim with several salient contradictions,
-   expected to produce disagreement across samples.
+1. **Intended-stable-true control:** correct claim with a coherent supporting
+   explanation.
+2. **Intended-stable-false narrative:** false claim with a coherent explanation
+   that overlooks a rare but deterministic counterexample.
+3. **Intended-high-disagreement false control:** false claim with competing cues
+   or higher verification cost. High disagreement is a preregistered prediction,
+   not a label; obvious contradictions might instead produce stable rejection.
 4. **Neutral presentation control:** the same claim without the supporting
    narrative, used to estimate narrative influence.
 
-“Stable” is a prediction about response distribution, not a property assigned
-after seeing results. The eventual preregistration must define it using a
-development set and then hold thresholds fixed.
+“Stable” and “high disagreement” are predictions about response distributions,
+not properties assigned by the constructor. The eventual preregistration must
+define them using a development set and then hold thresholds fixed.
 
 ## Subject protocol
 
@@ -205,10 +207,15 @@ held-out generator families:
 If any criterion is adopted, its numerical threshold and sample size must be set
 before subject collection. This note authorizes no data collection.
 
+## Prototype status
+
+The first four synthetic fixtures and an exhaustive oracle now exist. They prove
+only that the task schema, public/private split, paired presentation, and truth
+resolution can operate. “Stable” and “high disagreement” remain untested until
+independent samples exist. The fixtures are infrastructure, not E003 data.
+
 ## Next design problem
 
-Create a tiny task-generator/oracle prototype with no subject calls. It should
-produce matched true, intended-stable-false, intended-unstable-false, and neutral
-variants, and prove truth labels by exhaustive execution. “Stable” remains an
-untested prediction until independent samples exist. The prototype is
-infrastructure, not E003 data.
+Audit whether truth labels are recoverable from shallow surface features, then add
+a second generator/property family. A single affine-modulo monotonicity family
+cannot support a held-out-family claim.
