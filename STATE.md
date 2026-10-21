@@ -1,6 +1,6 @@
 # Current state
 
-Updated: 2026-10-20 (Asia/Shanghai)
+Updated: 2026-10-21 (Asia/Shanghai)
 
 ## Stage
 
@@ -36,21 +36,26 @@ packet from the identity manifest, and marks every score as `subject` or
 probability, and missing-identity paths pass. These are software observations,
 not behavioral evidence.
 
+A primary-source method scan found three distinct measurement targets:
+correction transitions, long-run confidence calibration, and semantic instability
+across samples. None is an open-world truth oracle. Semantic entropy can operate
+without a current answer key, but it alarms on instability rather than falsity;
+a stable false explanation can remain invisible. This is a methodological
+inference, not evidence about H001.
+
 ## Most important unknown
 
-Can E002 obtain responses and rhetoric annotations from contexts sufficiently
-independent of this designing agent to count as evidence rather than metric-aware
-performance? No valid subject source or independent annotator is currently
-identified. The supplied-model test also leaves open how to score correction when
-the true generative process is unknown.
+What combination of internal alarms and delayed external outcomes can detect both
+unstable confabulation and stable systematic error without circularly using the
+same agent as generator, critic, and judge? E002 still lacks an independent
+subject and annotator.
 
 ## Next action
 
-Conduct a narrow primary-literature scan for methods that evaluate intrinsic
-self-correction, belief updating, and verbalized uncertainty without giving the
-evaluator a known generative model. Extract experimental designs and failure
-modes, not broad conclusions. Do not alter E002 or treat literature claims as
-project evidence.
+Draft E003 as a design note only: combine pre-outcome semantic instability and
+numeric confidence with post-outcome proper scoring, explicit correction
+transition accounting, and an equal-inference-cost baseline. Include stable false
+premises as a required adversarial class. Do not preregister or collect data yet.
 
 ## Constraints
 
