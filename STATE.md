@@ -8,9 +8,10 @@ Preregistration and instrumentation. E001 is complete and E002's design is
 frozen. Its parser, anonymizer, and scorer have passed synthetic tests; no
 population-level empirical result exists yet.
 
-E003 remains a mutable design. Its four-item synthetic task/oracle prototype now
-passes exhaustive truth-label, public/private separation, narrative-pairing, and
-schema-leak checks. It contains no subject responses and is not an experiment.
+E003 remains a mutable design. Its eight-item, two-family synthetic task/oracle
+prototype now passes exhaustive truth-label, public/private separation,
+narrative-pairing, and schema-leak checks. It contains no subject responses and
+is not an experiment.
 
 ## Current model
 
@@ -53,25 +54,34 @@ reality channel, requires stable-false and matched controls, records both harmfu
 and beneficial revisions, and mandates an equal-call baseline. No thresholds are
 frozen and no E003 data exist.
 
-The prototype demonstrated that one affine-modulo family can generate a true
-monotonicity claim, false claims with one or two executable counterexamples, and
-an exactly paired narrative/neutral presentation. “Stable” remains unobserved.
-Both executable and arithmetic oracle paths were authored here, so their agreement
-reduces implementation error but does not establish organizational independence.
+The prototype now contains affine-modulo monotonicity and binary-list rotation
+weight claims. The rotation family crosses trigger and replacement bits, balances
+truth within narrative and neutral presentations, and has no modulus cue. Both
+oracles exhaust their bounded domains and cross-check rendered execution against
+a direct reference implementation. Because both paths were authored here, their
+agreement reduces implementation error but does not establish organizational
+independence. “Stable” remains unobserved.
+
+The first mechanical surface audit exposed a real construction artifact:
+explanation length recovered 6/8 labels versus a 5/8 majority baseline. After all
+narratives were matched to 24 words, no audited single feature exceeded majority
+accuracy. This is a repair observation, not evidence of generalization. Family
+identity still shifts the truth base rate from 1/4 to 2/4, and eight in-sample
+items are far too few to rule out other shortcuts.
 
 ## Most important unknown
 
-Can the generator scale across genuinely different program/property families
-without letting shallow features—modulus, code length, narrative wording, or
-generator identity—predict the truth label? Independent subject, oracle-author,
-and analyst roles remain unavailable.
+Can the generator scale while holding truth prevalence and surface distributions
+constant within each program/property family? The current family imbalance and
+single-author oracle remain unresolved; independent subject, oracle-author, and
+analyst roles are also unavailable.
 
 ## Next action
 
-Add a mechanical leakage audit for E003 prototype surface features and specify a
-second generator/property family whose truth labels cannot be predicted by the
-first family's modulus pattern. Keep all data synthetic; do not call a subject
-model, fit an alarm, or preregister E003.
+Construct a larger, truth-balanced development grid for both E003 families and
+define which surface checks will be frozen before a third family is generated as
+a holdout. Keep all data synthetic; do not call a subject model, fit an alarm, or
+preregister E003.
 
 ## Constraints
 

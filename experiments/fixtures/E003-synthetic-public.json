@@ -19,7 +19,7 @@
       "domain": "integers x with 0 <= x <= 8",
       "claim": "For every integer x with 0 <= x < 8, f(x + 1) >= f(x).",
       "presentation": "narrative",
-      "supporting_explanation": "The unwrapped values rise by two from 1 through 17. Since the modulus is 19, no value reaches the wrap point, so each adjacent output preserves the order."
+      "supporting_explanation": "Unwrapped values rise by two from 1 through 17. Because the modulus is 19, no value reaches the wrap point, preserving adjacent output order."
     },
     {
       "item_id": "P-6F30",
@@ -29,7 +29,7 @@
       "domain": "integers x with 0 <= x <= 8",
       "claim": "For every integer x with 0 <= x < 8, f(x + 1) >= f(x).",
       "presentation": "narrative",
-      "supporting_explanation": "The positive coefficient advances outputs by seven at every step. The bounded domain is shorter than the modulus, so modular reduction cannot reverse the adjacent order."
+      "supporting_explanation": "A positive coefficient advances outputs by seven each step. The bounded domain is shorter than the modulus, so modular reduction cannot reverse adjacent order."
     },
     {
       "item_id": "P-91D2",
@@ -39,7 +39,47 @@
       "domain": "integers x with 0 <= x <= 8",
       "claim": "For every integer x with 0 <= x < 8, f(x + 1) >= f(x).",
       "presentation": "narrative",
-      "supporting_explanation": "The unwrapped values rise by two from 1 through 17. Since inputs stop at 8, no value exceeds the modulus, so each adjacent output preserves the order."
+      "supporting_explanation": "Unwrapped values rise by two from 1 through 17. Because inputs stop at 8, no value exceeds the modulus, preserving adjacent output order throughout."
+    },
+    {
+      "item_id": "P-2B5D",
+      "data_class": "synthetic_prototype",
+      "language": "python",
+      "source": "def f(bits):\n    out = bits[1:] + bits[:1]\n    if bits == [1, 1, 1, 1, 1]:\n        out[0] = 1\n    return out\n",
+      "domain": "all binary lists bits of length 5",
+      "claim": "For every binary list bits of length 5, sum(f(bits)) == sum(bits).",
+      "presentation": "narrative",
+      "supporting_explanation": "Rotation preserves every bit. At the all-one boundary, writing one into the first position leaves the total number of one bits unchanged as expected."
+    },
+    {
+      "item_id": "P-A104",
+      "data_class": "synthetic_prototype",
+      "language": "python",
+      "source": "def f(bits):\n    out = bits[1:] + bits[:1]\n    if bits == [1, 1, 1, 1, 1]:\n        out[0] = 0\n    return out\n",
+      "domain": "all binary lists bits of length 5",
+      "claim": "For every binary list bits of length 5, sum(f(bits)) == sum(bits).",
+      "presentation": "narrative",
+      "supporting_explanation": "Rotation preserves every bit. At the all-one boundary, normalizing the first position changes only representation and leaves the total number of one bits unchanged."
+    },
+    {
+      "item_id": "P-7D33",
+      "data_class": "synthetic_prototype",
+      "language": "python",
+      "source": "def f(bits):\n    out = bits[1:] + bits[:1]\n    if bits == [0, 0, 0, 0, 0]:\n        out[0] = 0\n    return out\n",
+      "domain": "all binary lists bits of length 5",
+      "claim": "For every binary list bits of length 5, sum(f(bits)) == sum(bits).",
+      "presentation": "neutral",
+      "supporting_explanation": null
+    },
+    {
+      "item_id": "P-E6A9",
+      "data_class": "synthetic_prototype",
+      "language": "python",
+      "source": "def f(bits):\n    out = bits[1:] + bits[:1]\n    if bits == [0, 0, 0, 0, 0]:\n        out[0] = 1\n    return out\n",
+      "domain": "all binary lists bits of length 5",
+      "claim": "For every binary list bits of length 5, sum(f(bits)) == sum(bits).",
+      "presentation": "neutral",
+      "supporting_explanation": null
     }
   ]
 }

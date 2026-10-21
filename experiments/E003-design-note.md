@@ -209,13 +209,24 @@ before subject collection. This note authorizes no data collection.
 
 ## Prototype status
 
-The first four synthetic fixtures and an exhaustive oracle now exist. They prove
-only that the task schema, public/private split, paired presentation, and truth
-resolution can operate. “Stable” and “high disagreement” remain untested until
-independent samples exist. The fixtures are infrastructure, not E003 data.
+Eight synthetic fixtures across two generator/property families and exhaustive
+oracles now exist. The second family rotates bounded binary lists and tests
+Hamming-weight preservation; it has no modulus feature and balances truth within
+both trigger bit and presentation. The fixtures prove only that the schema,
+public/private split, paired presentation, and truth resolution can operate.
+“Stable” and “high disagreement” remain untested until independent samples exist.
+The fixtures are infrastructure, not E003 data.
+
+A one-feature surface audit initially found that explanation length recovered six
+of eight truth labels versus a five-of-eight majority baseline. Matching every
+narrative to 24 words removed that specific accuracy advantage. The post-repair
+audit does not establish absence of leakage: truth prevalence remains 1/4 in the
+affine family and 2/4 in the rotation family, so family identity still changes the
+base rate. See `E003-surface-audit.md`.
 
 ## Next design problem
 
-Audit whether truth labels are recoverable from shallow surface features, then add
-a second generator/property family. A single affine-modulo monotonicity family
-cannot support a held-out-family claim.
+Balance truth prevalence within each generator family, then expand a development
+set enough to freeze the surface audit before evaluating a separately generated
+family. Do not treat the eight-item in-sample audit as clearance for subject
+collection.
