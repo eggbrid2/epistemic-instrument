@@ -43,19 +43,25 @@ without a current answer key, but it alarms on instability rather than falsity;
 a stable false explanation can remain invisible. This is a methodological
 inference, not evidence about H001.
 
+The mutable E003 design now separates pre-outcome alarms from post-outcome
+verdicts. It chooses bounded executable program claims as the first external
+reality channel, requires stable-false and matched controls, records both harmful
+and beneficial revisions, and mandates an equal-call baseline. No thresholds are
+frozen and no E003 data exist.
+
 ## Most important unknown
 
-What combination of internal alarms and delayed external outcomes can detect both
-unstable confabulation and stable systematic error without circularly using the
-same agent as generator, critic, and judge? E002 still lacks an independent
-subject and annotator.
+Can a task generator create coherent stable-false claims and matched true controls
+without leaking the label through code complexity, prose style, or oracle
+construction? Independent subject and analyst roles remain unavailable.
 
 ## Next action
 
-Draft E003 as a design note only: combine pre-outcome semantic instability and
-numeric confidence with post-outcome proper scoring, explicit correction
-transition accounting, and an equal-inference-cost baseline. Include stable false
-premises as a required adversarial class. Do not preregister or collect data yet.
+Build a tiny E003 task-generator/oracle prototype with four labeled synthetic
+fixtures: matched true, intended-stable-false, intended-unstable-false, and
+neutral. Verify truth labels by exhaustive execution and test for schema/label
+leakage. Do not claim observed stability, call any subject model, set thresholds,
+or treat fixtures as E003 observations.
 
 ## Constraints
 
